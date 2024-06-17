@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+:root {
+    --index: calc(1vw + 1vh);
+}
+html {
+    scroll-behavior: smooth;
+}
+.container {
+    padding: 0 350px;
+}
+.header {
+    background: url('../assets/main-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+}
+nav {
+    padding-top: 26px;
+}
+.header-content {
+    margin-top: 62px;
+    max-width: 542px;
+}
+.header-content__title {
+    font-family: 'Merriweather';
+    color: rgb(49, 49, 49);
+    font-size: clamp(36px, calc(var(--index) * 2.5), 60px);
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: 0px;
+    text-align: left;
+    text-transform: uppercase;
+}
+.header-content__title > span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header-content__info {
+    margin: 24px 0 40px 0;
+    color: rgb(49, 49, 49);
+    font-family: 'Golos Text';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 0px;
+    text-align: center;
+}
+.header-content__buttons {
+    display: flex;
+    gap: 16px;
+}
+.header-content__buttons > a {
+    width: 263px;
+    height: 78px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 66px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: 0px;
+    text-align: center;
+}
+.header-content__buttons a:hover {
+    transform: scale(1.05);
+}
+.header-content__button1 {
+    background: rgb(31, 31, 31);
+    font-family: 'Golos Text';
+    color: rgb(255, 255, 255);
+}
+.header-content__button2 {
+    border: 2px solid rgb(31, 31, 31);
+    font-family: 'Golos Text';
+    color: rgb(31, 31, 31);
+}
+
+.ticker {
+    height: 60px;
+    padding: 0 12px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    background: rgb(245, 73, 50);
+    overflow-x: hidden;
+}
+.ticker__container {
+    position: relative;
+
+    display: flex;
+    gap: 12px;
+}
+.ticker__content {
+    flex-shrink: 0;
+    display: flex;
+    gap: 12px;
+    justify-content: space-around;
+    min-width: 100%;
+    gap: 12px;
+    animation: ticker 10s infinite linear;
+}
+
+.ticker__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    color: rgb(255, 255, 255);
+    font-family: 'Merriweather';
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: 0px;
+    text-align: right;
+    text-transform: uppercase;
+}
+.ticker__text::after {
+    content: '';
+    display: flex;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+}
+@keyframes ticker {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translateX(calc(-100% - 12px));
+    }
+}
+.support {
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.support__text {
+    max-width: 764px;
+    font-family: 'Merriweather';
+    font-size: clamp(28px, calc(var(--index) * 2), 36px);
+    font-weight: 700;
+    line-height: 135%;
+    letter-spacing: 0px;
+    text-align: left;
+    text-transform: uppercase;
+}
+.red-text {
+    color: red;
+}
+.info {
+    margin-top: 64px;
+    display: flex;
+    gap: 17px;
+}
+.info img {
+    max-width: 474px;
+}
+.info__content {
+    display: flex;
+    flex-direction: column;
+}
+.info__text {
+    font-family: 'Merriweather';
+    font-size: clamp(28px, calc(var(--index) * 2), 36px);
+    font-weight: 400;
+    line-height: 135%;
+    letter-spacing: 0px;
+    text-align: left;
+    text-transform: uppercase;
+}
+.info-table {
+    position: relative;
+    margin-top: 60px;
+    margin-bottom: 48px;
+}
+.info-table__item {
+    max-width: 704px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid rgb(208, 208, 208);
+}
+.info-table__item:last-child {
+    border: none;
+}
+.info-table__item > h2 {
+    width: 44%;
+    color: rgb(49, 49, 49);
+    font-family: 'Golos Text';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0px;
+    text-align: left;
+    opacity: 0.7;
+}
+.info-table__item > span {
+    border-left: 2px solid rgb(208, 208, 208);
+    width: 56%;
+    padding: 16px;
+    color: rgb(49, 49, 49);
+    font-family: 'Golos Text';
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0px;
+    text-align: left;
+}
+.line-through {
+    margin-right: 12px;
+    text-decoration: line-through;
+    text-decoration-color: red;
+}
+.info__link {
+    color: rgb(48, 87, 162);
+    font-family: 'Golos Text';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0px;
+    text-align: left;
+}
+.stages {
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+.stages__title {
+    max-width: 704px;
+    color: rgb(49, 49, 49);
+    font-family: 'Merriweather';
+    font-size: clamp(36px, calc(var(--index) * 2.5), 54px);
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0px;
+    text-align: left;
+    text-transform: uppercase;
+}
+.stages__title span {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.stages__title a {
+    display: flex;
+    width: 280px;
+    color: rgb(48, 87, 162);
+    font-family: 'Golos Text';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0px;
+    text-align: left;
+    text-transform: none;
+}
+.stages__items {
+    display: grid;
+    grid-template-areas:
+        'stages__item-1 stages__item-2 stages__item-3'
+        'stages__item-4 stages__item-5 stages__item-3'
+        'stages__item-6 stages__item-7 stages__item-7';
+    gap: 20px;
+    grid-template-columns: repeat(3, 394px);
+    grid-template-rows: 112px 112px 136px;
+}
+#stages__item-1 {
+    grid-area: stages__item-1;
+}
+#stages__item-2 {
+    grid-area: stages__item-2;
+}
+#stages__item-3 {
+    grid-area: stages__item-3;
+}
+#stages__item-4 {
+    grid-area: stages__item-4;
+}
+#stages__item-5 {
+    grid-area: stages__item-5;
+}
+#stages__item-6 {
+    grid-area: stages__item-6;
+}
+#stages__item-7 {
+    grid-area: stages__item-7;
+}
+.stages__items {
+    margin-top: 54px;
+}
+.stages__item {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    gap: 16px;
+    background-image: url('../assets/stages.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.stages__number {
+    min-width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    background: rgb(255, 255, 255);
+    color: rgb(49, 49, 49);
+    font-family: 'Golos Text';
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0px;
+    text-align: left;
+}
+.stages__text {
+    color: rgb(49, 49, 49);
+    font-family: 'Golos Text';
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: 0px;
+    text-align: left;
+}
+.stages__item:last-child .stages__text {
+    width: 446px;
+    display: flex;
+    justify-content: space-between;
+}
+.stages__item:last-child .stages__text::after {
+    content: url('../assets/airplane.png');
+    position: absolute;
+    top: -70%;
+    right: -10%;
+}
+.stages__slides-buttons {
+    display: none;
+}
+.arrow {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(49, 49, 49);
+    border-radius: 50%;
+}
+.carousel-prev-icon {
+    content: url('../assets/arrow.svg');
+}
+.carousel-next-icon {
+    content: url('../assets/arrow.svg');
+    transform: rotate(180deg);
+}
+.disabled-arrow {
+    background: rgba(49, 49, 49, 0.2);
+}
+.members {
+    margin-bottom: 140px;
+    display: grid;
+    grid-template-areas:
+        'members-title members-pagination'
+        'members-slider members-slider';
+    align-items: center;
+}
+.members__title {
+    color: rgb(49, 49, 49);
+    font-family: 'Merriweather';
+    font-size: clamp(36px, calc(var(--index) * 2.5), 54px);
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0px;
+    text-align: left;
+    text-transform: uppercase;
+    grid-area: members-title;
+}
+.members__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+    grid-area: members-pagination;
+}
+.members-pagination__slides {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.members-pagination__slides span {
+    color: rgb(49, 49, 49);
+    font-family: 'Golos Text';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0px;
+    text-align: left;
+}
+.members-pagination__slides span:last-child {
+    opacity: 0.6;
+}
+.members__slider {
+    margin-top: 60px;
+    width: 100%;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    grid-area: members-slider;
+}
+.members-slider__wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    transition: transform 0.5s;
+}
+.members-slider__item {
+    flex: 0 0 33.3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.members-item__avatar {
+    width: clamp(244px, calc(var(--index) * 11), 320px);
+    height: clamp(244px, calc(var(--index) * 11), 320px);
+    margin-bottom: 28px;
+    background-image: url('../assets/avatar.png');
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+}
+.members-slider__item p {
+    color: rgb(21, 21, 21);
+    font-family: 'Golos Text';
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0px;
+    text-align: left;
+}
+.members-slider__item span {
+    color: rgb(21, 21, 21);
+    opacity: 0.6;
+    font-family: 'Golos Text';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0px;
+    text-align: left;
+}
+.members-slider__item a {
+    padding: 12px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    border: 1px solid rgb(48, 87, 162);
+    border-radius: 62px;
+    color: rgb(48, 87, 162);
+    font-family: 'Golos Text';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: 0px;
+    text-align: left;
+}
+.footer {
+    padding: 40px 72px 72px 72px;
+    background: rgb(233, 222, 212);
+}
+.footer p {
+    color: rgb(49, 49, 49);
+    font-family: "Golos Text";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0px;
+    text-align: left;
+    opacity: 0.6;
+}
